@@ -47,7 +47,7 @@
         <h2>News</h2>
 
             <ul>
-                <li><b>January 2022</b>: <b style="color:red">Oral @ ICLR 2022</b> - Our work <a href="https://arxiv.org/pdf/2203.11370.pdf">Language modeling via stochastic processes</a> was accepted to ICLR 2022 as an oral (<1.6%).</li> 
+                <li><b>May 2023</b>: <b style="color:red">Oral @ ICLR 2022</b> - Our work <a href="https://arxiv.org/pdf/2203.11370.pdf">Language modeling via stochastic processes</a> was accepted to ICLR 2022 as an oral (<1.6%).</li> 
                 <li><b>August 2021</b>: <b>Paper @ EMLNLP 2021</b> - Our work <a href="https://arxiv.org/pdf/2110.05422.pdf">Calibrate your listeners! Robust communication-based training for pragmatic speakers</a> was accepted to Findings of EMNLP 2021.</li> 
                 <li><b>April 2021</b>: <b>Blog</b> - Published a <a href="https://ai.googleblog.com/2021/04/model-based-rl-for-decentralized-multi.html">Google AI Blog post</a> on our multirobot collaboration work, <a href="https://arxiv.org/abs/2003.06906"> Model-based Reinforcement Learning for Multiagent Goal Alignment</a>.</li> 
                 <li><b>January 2021</b>: <b>Workshop</b> - Co-organizing the workshop <a href="https://sites.google.com/view/neverendingrl/home?authuser=0">A Roadmap to Never-Ending Reinforcement Learning</a> at ICLR 2021. Please consider submitting your work!</li>
@@ -87,12 +87,11 @@
                 -->
 
 
-                
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src="images/pf_cars.gif" alt="hpp" style="border-style: none" width="300">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/mpc-pf_its.gif" alt="hpp" style="border-style: none" width="350">
             </td>
-            <td style="padding:20px;width:70%;vertical-align:middle">
+            <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://ieeexplore.ieee.org/document/10046400">
                 <papertitle>MPC-PF: Socially and Spatially Aware Object Trajectory Prediction for Autonomous Driving Systems Using Potential Fields</papertitle>
               </a>
@@ -101,343 +100,135 @@
               <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/akhajepo">Amir Khajepour</a>,
               <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>,
               <br>
-              <em>IEEE Transactions on Intelligent Transportation Systems (T-ITS), 2023</em>. 
+              <em>Transactions on Intelligent Transportation Systems (T-ITS), 2023</em>. 
+              <br>
+              <b style="color:red">Outperforms 2<sup>nd</sup> and 3<sup>rd</sup> place on Waymo Motion Dataset (2021)</b>
               <br>
               [
               <a href="https://ieeexplore.ieee.org/document/10046400">Paper</a> &nbsp/&nbsp
               <a href="https://www.youtube.com/watch?v=56sD-qsREBY&list=PLQG3T3nkAnJ8qxJz8-jpqMEWN5JEh0Wt3&index=3&ab_channel=NeelBhatt">Video</a>
                ]
-              <p>Many real-world applications of language models (LMs), such as code autocomplete and writing assistance, involve human-LM interaction, but the main LM benchmarks are non-interactive, where a system produces output without human intervention. To evaluate human-LM interaction, we develop a framework, Human-AI Language-based Interaction Evaluation (H-LINE), that expands non-interactive evaluation along three dimensions, capturing (i) the interactive process, not only the final output; (ii) the first-person subjective experience, not just a third-party assessment; and (iii) notions of preference beyond quality.
+              <p>We propose MPC-PF, a model that embeds surrounding object and road map information in the form of a potential field to model agent-agent and agent-space interactions. We show the efficacy of our multi-object trajectory prediction method both qualitatively and quantitatively achieving state-of-the-art results on the Waymo Open Motion Dataset and also on other common urban driving scenarios where social norms must be followed.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/iros_poster.gif" alt="hpp" style="border-style: none" width="350">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9981046">
+                <papertitle>MPC-PF: Social Interaction Aware Trajectory Prediction of Dynamic Objects for Autonomous Driving Using Potential Fields</papertitle>
+              </a>
+              <br>
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/akhajepo">Amir Khajepour</a>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>,
+              <br>
+              <em>International Conference on Intelligent Robots and Systems (IROS), 2022</em>. 
+              <br>
+              [
+              <a href="https://ieeexplore.ieee.org/abstract/document/9981046">Paper</a> &nbsp/&nbsp
+              <a href="https://www.youtube.com/watch?v=4DR7fqruLGo&list=PLQG3T3nkAnJ8qxJz8-jpqMEWN5JEh0Wt3&index=1&ab_channel=NeelBhatt">Video</a>
+               ]
+              <p>Predicting object motion behaviour is a challenging but crucial task for safe decision making and path planning for an autonomous vehicle. We tackle this problem by introducing MPC-PF: a novel potential field-based trajectory predictor that incorporates social interaction and is able to tradeoff between inherent model biases across the prediction horizon. Through evaluation on a variety of common urban driving scenarios, we show that our model is capable of producing accurate predictions for short and long term timesteps and demonstrate significance of model architecture via an ablation study.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/augmented_case.png" alt="hpp" style="border-style: none" width="350">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9926595">
+                <papertitle>Augmented Visual Localization Using a Monocular Camera for Autonomous Mobile Robots</papertitle>
+              </a>
+              <br>
+              <a href="https://ca.linkedin.com/in/ali-salimzade">Ali Salimzadeh</a>,
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>,
+              <br>
+              <em>International Conference on Automation Science and Engineering (CASE), 2022</em>. 
+              <br>
+              [
+              <a href="https://ieeexplore.ieee.org/abstract/document/9926595">Paper</a>
+               ]
+              <p>We develop a robust infrastructure-aided localization framework using only a single low-cost camera with a fisheye lens. To reduce the computational load, we use an ROI alongside estimated depth to re-project the robot pointcloud cluster with geometrical outlier detection. We use this position and depth information in an uncertainty-aware observer with adaptive covariance allocation and bounded estimation error to deal with position measurement noises at the limits of the field of view, and intermittent occlusion in dynamic environments. Moreover, the aforementioned motion model, uses a learning-based prediction model for input estimation based on a moving buffer of the robot position. Several experiments with occlusion and intermittent visual disruption/detection confirm effectiveness of the developed framework in re-initializing the estimation process after failure in the visual detection, and handling temporary data loss due to sensor faults or changes in lighting conditions.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/infra_robotics_2.png" alt="hpp" style="border-style: none" width="350">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://www.mdpi.com/2218-6581/11/4/82">
+                <papertitle>Infrastructure-Aided Localization and State Estimation for Autonomous Mobile Robots</papertitle>
+              </a>
+              <br>
+              <a href="https://www.fzi.de/team/daniel-floegel/">Daniel Flögel</a>,
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>,
+              <br>
+              <em>Robotics Journal, 2022</em>. 
+              <br>
+              [
+              <a href="https://www.mdpi.com/2218-6581/11/4/82">Paper</a>
+               ]
+              <p>A slip-aware localization framework is proposed for mobile robots experiencing wheel slip in dynamic environments. The framework fuses infrastructure-aided visual tracking data and proprioceptive sensory data from a skid-steer mobile robot to enhance accuracy and reduce variance of the estimated states. Covariance intersection is used to fuse the pose prediction and the visual thread, such that the updated estimate remains consistent. As confirmed by experiments on a skid-steer mobile robot, the designed localization framework addresses state estimation challenges for indoor/outdoor autonomous mobile robots which experience high-slip, uneven torque distribution at each wheel (by the motion planner), or occlusion when observed by an infrastructure-mounted camera.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/gpr_smcs.png" alt="hpp" style="border-style: none" width="350">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2101.06901">
+                <papertitle>Soft Constrained Autonomous Vehicle Navigation using Gaussian Processes and Instance Segmentation</papertitle>
+              </a>
+              <br>
+              <a href="https://scholar.google.com/citations?user=yv016ZMAAAAJ&hl=en">Bruno H. Groenner Barbosa</a>,
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>,
+              <br>
+              <em>Submitted to Transactions on Systems, Man, and Cybernetics: Systems (SMCS)</em>. 
+              <br>
+              [
+              <a href="https://arxiv.org/pdf/2101.06901">Paper</a>
+               ]
+              <p>We present a generic feature-based navigation framework for autonomous vehicles using a soft constrained Particle Filter. After obtaining features of mapped landmarks in instance-based segmented images acquired from a monocular camera, vehicle-to-landmark distances are predicted using Gaussian Process Regression (GPR) models in a mixture of experts approach. Experimental results confirm that the use of image segmentation features improves the vehicle-to-landmark distance prediction notably, and that the proposed soft constrained approach reliably localizes the vehicle even with reduced number of landmarks and noisy observations.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/mhe_itsc.gif" alt="hpp" style="border-style: none" width="350">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9294306">
+                <papertitle>Real-time Pedestrian Localization and State Estimation Using Moving Horizon Estimation</papertitle>
+              </a>
+              <br>
+              <a href="https://ca.linkedin.com/in/ehsan-mohammadbagher">Ehsan Mohammadbagher*</a>,
+              <strong>Neel P. Bhatt*</strong>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>,
+              <br>
+              <em>Intelligent Transportation Systems Conference (ITSC), 2020</em>. 
+              <br>
+              [
+              <a href="https://ieeexplore.ieee.org/abstract/document/9294306">Paper</a>
+               ]
+              <p>We propose a constrained moving horizon state estimation approach to estimate an object's states in 3D with respect to a global stationary frame including position, velocity, and acceleration that are robust to intermittently noisy or absent sensor measurements utilizing a computationally light-weight fusion of 2D dections and projected LIDAR depth measurements. The performance of the proposed approach is experimentally verified on our dataset featuring urban pedestrian crossings.
               </p>
             </td>
           </tr>
                
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/zone.png" alt="kts" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://openreview.net/pdf?id=SgBHmHMctfd">
-                <papertitle>In the ZONE: Measuring difficulty and progression in curriculum generation</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt</strong>,
-              <a href="">Jesse Mu</a>,
-              <a href="">Dilip Arumugam</a>,
-              <a href="">Natasha Jaques</a>,
-              <a href="https://cocolab.stanford.edu/ndg">Noah Goodman</a>
-              <br>
-              <em>NeurIPS 2022 Deep Reinforcement Learning Workshop</em>. 
-              <br>
-              [
-              <a href="https://openreview.net/pdf?id=SgBHmHMctfd">Paper</a> 
-               ]
-              <br>
-              <p>
-                A common strategy in curriculum generation for reinforcement learning is to train a teacher network to generate tasks that enable student learning. But, what kind of tasks enables this? One answer is tasks belonging to a student's zone of proximal development (ZPD), a concept from developmental psychology. These are tasks that are not too easy and not too hard for the student.  Albeit intuitive, ZPD is not well understood computationally. We propose ZONE, a novel computational framework that operationalizes ZPD. It formalizes ZPD through the language of Bayesian probability theory, revealing that tasks should be selected by difficulty (the student's probability of task success) and learning progression (the degree of change in the student's model parameters). 
-</p>
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/elign.png" alt="elign" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/pdf/2210.04365.pdf">
-                <papertitle>ELIGN: Expectation Alignment as a Multi-Agent Intrinsic Reward</papertitle>
-              </a>
-              <br>
-              <a href="">Zixian Ma</a>,
-              <strong>Neel P. Bhatt</strong>,
-              <a href="">Li Fei-Fei</a>,
-              <a href="">Michael Bernstein</a>,
-              <a href="">Ranjay Krishna</a>
-              <br>
-              <em>36th Conference on Neural Information Processing Systems (NeurIPS 2022)</em>. 
-              <br>
-              [
-              <a href="https://arxiv.org/pdf/2210.04365.pdf">Paper</a> /
-              <a href="https://github.com/StanfordVL/alignment">Code</a>
-               ]
-              <br>
-              <p>
-                Modern multi-agent reinforcement learning frameworks rely on centralized training and reward shaping to perform well. However, centralized training and dense rewards are not readily available in the real world. Current multi-agent algorithms struggle to learn in the alternative setup of decentralized training or sparse rewards. To address these issues, we propose a self-supervised intrinsic reward ELIGN - expectation alignment - inspired by the self-organization principle in Zoology. 
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/clap.png" alt="elign" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://openreview.net/pdf?id=OQP7leJkAu">
-                <papertitle>CLaP: Conditional Latent Planners for Offline Reinforcement Learning</papertitle>
-              </a>
-              <br>
-              <a href="">Harry Donghyeop Shin</a>,
-              <strong>Neel P. Bhatt</strong>
-              <br>
-              <em> NeurIPS 2022 Workshop on Foundation Models for Decision Making</em>. 
-              <br>
-              [
-              <a href="https://openreview.net/pdf?id=OQP7leJkAu">Paper</a> /
-              Code (coming soon)
-               ]
-              <br>
-              <p>
-                Recent work has formulated offline reinforcement learning (RL) as a sequence
-                modeling problem, benefiting from the simplicity and scalability of the Transformer
-                architecture. However, sequence models struggle to model trajectories that are
-                long-horizon or involve complicated environment dynamics. We propose CLaP
-                (Conditional Latent Planners) to learn a simple goal-conditioned latent space
-                from offline agent behavior, and incrementally decode good actions from a latent
-                plan.
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/kts.png" alt="kts" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://openreview.net/pdf?id=rpGGNrMJpW9">
-                <papertitle>Know Thy Student: Interactive Learning with Gaussian Processes</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt</strong>,
-              <a href="https://www.mikehwu.com/">Mike Wu</a>,
-              <a href="https://cocolab.stanford.edu/ndg">Noah Goodman</a>
-              <br>
-              <em>ICLR 2022 Workshop on From Cells to Societies: Collective Learning across Scales</em>. 
-              <br>
-              [
-              <a href="https://openreview.net/pdf?id=rpGGNrMJpW9">Paper</a> 
-               ]
-              <br>
-              <p>
-              Learning often involves interaction between multiple agents. 
-                Human teacher-student settings best illustrate how interactions result in efficient knowledge passing where the teacher constructs a curriculum based on their students' abilities. 
-                Prior work in machine teaching studies how the teacher should construct optimal teaching datasets assuming the teacher knows everything about the student.
-                However, in the real world, the teacher doesn't have complete information and must probe before teaching.
-                Our work proposes a simple probing algorithm which uses Gaussian processes for inferring student-related information, before constructing a teaching dataset.
-                Our experiments highlight the importance of probing before teaching, 
-                demonstrate how students can learn much more efficiently with the help of an interactive teacher, and outline where probing combined with machine teaching would be more desirable than passive learning. 
-</p>
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/lm_via_sp.png" alt="hpp" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://openreview.net/forum?id=pMQwKL1yctf">
-                  <papertitle>Language modeling via stochastic processes</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt</strong>,
-              <a href="https://esdurmus.github.io/">Esin Durmus</a>,
-              <a href="https://cocolab.stanford.edu/ndg">Noah Goodman</a>,
-              <a href="https://thashim.github.io/">Tatsunori Hashimoto</a>,
-              <br>
-              <em>International Conference for Learning Representations (ICLR) 2022</em>. 
-              <br>
-              <b style="color:red">Oral Presentation (1.6% oral acceptance rate)</b>
-              <br>
-              [
-              <a href="https://openreview.net/forum?id=pMQwKL1yctf">Paper</a> /
-              <a href="https://www.youtube.com/watch?v=AwnoASlxeIs&t=13s&ab_channel=RoseWang">Video</a> /
-              <a href="https://github.com/rosewang2008/language_modeling_via_stochastic_processes">Code</a> ]
-              <br>
-              <p>Modern language models can generate high-quality short texts. However, they often meander or are incoherent when generating longer texts. These issues arise from the next-token-only language modeling objective. To address these issues, we introduce Time Control (TC), a language model that implicitly plans via a latent stochastic process. TC does this by learning a representation which maps the dynamics of how text changes in a document to the dynamics of a stochastic process of interest. Using this representation, the language model can generate text by first implicitly generating a document plan via a stochastic process, and then generating text that is consistent with this latent plan.</p>
-            </td>
-          </tr>
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/cyl.png" alt="hpp" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/pdf/2110.05422.pdf">
-                <papertitle>Calibrate your listeners! Robust communication-based training for pragmatic speakers</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt</strong>,
-              Julia White,
-              <a href="https://cs.stanford.edu/~muj/">Jesse Mu</a>,
-              <a href="https://cocolab.stanford.edu/ndg">Noah Goodman</a>
-              <br>
-              <em>Findings of EMNLP 2021</em>. 
-              <br>
-              [
-              <a href="https://arxiv.org/pdf/2110.05422.pdf">Paper</a> /
-              <a href="https://github.com/rosewang2008/calibrate_your_listeners">Video</a> /
-              <a href="https://github.com/rosewang2008/calibrate_your_listeners">Code</a> ]
-              <p> To be good conversational partners, natural language processing (NLP) systems should be trained to produce contextually useful utterances. Prior work has investigated training NLP systems with communication-based objectives, where a neural listener stands in as a communication partner. However, these systems commonly suffer from semantic drift where the learned language diverges radically from natural language. We propose a method that uses a population of neural listeners to regularize speaker training.</p>
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/fm.png" alt="hpp" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/pdf/2108.07258.pdf">
-                <papertitle>On the opportunities and risks of foundation models</papertitle>
-              </a>
-              <br>
-              Many authors...,
-              <strong>Neel P. Bhatt</strong>,
-              more authors,...
-              <br>
-              <em>August 2021</em>. 
-              <br>
-              <p>This report provides a thorough account of the opportunities and risks of foundation models, ranging from their capabilities (e.g., language, vision, robotics, reasoning, human interaction) and technical principles(e.g., model architectures, training procedures, data, systems, security, evaluation, theory) to their applications (e.g., law, healthcare, education) and societal impact (e.g., inequity, misuse, economic and environmental impact, legal and ethical
-              considerations)..</p>
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/adhoc.png" alt="hpp" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2003.11778">
-                <papertitle>Too many cooks: Bayesian inference for coordinating multi-agent collaboration</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt*</strong>,
-              Sarah Wu*,
-              <a href="https://sociology.uchicago.edu/directory/james-evans">James A. Evans</a>,
-              <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>,
-              <a href="https://www.eecs.harvard.edu/~parkes/">David C. Parkes</a>,
-              <a href="http://www.mit.edu/~maxkw/">Max Kleiman-Weiner</a>
-              <br>
-              <em>Journal of the Cognitive Science Society, April 2021</em>. 
-              <br>
-              <em>NeurIPS 2020 Cooperative AI workshop</em>. 
-              <br>
-              <b style="color:red">Won best paper award at NeurIPS 2020 Cooperative AI Workshop!</b>
-              <br>
-              [
-              <a href="https://arxiv.org/abs/2003.11778">Paper</a> /
-              <a href="https://www.youtube.com/watch?v=Fd4RcVaNthY">Video</a> /
-              <a href="https://github.com/rosewang2008/gym-cooking">Code</a> ]
-              <p>We develop Bayesian Delegation, a decentralized multi-agent learning mechanism that enables agents to rapidly infer the sub-tasks of others by inverse planning. We demonstrate that our model is a capable ad-hoc collaborator, scales with team size and makes inferences about intent similar to human observers.</p>
-            </td>
-          </tr>
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/hpp.png" alt="hpp" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2003.06906">
-                <papertitle>Model-based Reinforcement Learning for Multiagent Goal Alignment</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt</strong>,
-              <a href="https://research.google/people/JChaseKew/">J.Chase Kew</a>,
-              <a href="https://scholar.google.com/citations?user=vOLXDDAAAAAJ&hl=en">Dennis Lee</a>,
-              <a href="https://deepai.org/profile/tsang-wei-edward-lee">Tsang-Wei Edward Lee</a>,
-              <a href="https://research.google/people/TingnanZhang/">Tingnan Zhang</a>,
-              <a href="http://brianichter.com/">Brian Ichter</a>,
-              <a href="http://www.jie-tan.net/">Jie Tan</a>,
-              <a href="https://www.afaust.info/">Aleksandra Faust</a>
-              <br>
-              <em>Conference on Robot Learning (CoRL) 2020</em>.<br>
-              <em>Mentioned in <a href="https://ai.googleblog.com/2021/01/google-research-looking-back-at-2020.html">Google AI Year in Review, 2020</a>.</em><br> 
-                [
-              <a href="https://arxiv.org/abs/2003.06906">Paper</a> /
-              <a href="https://www.youtube.com/watch?v=-LqgfksqNH8&feature=youtu.be">Video</a> /
-              <a href="https://sites.google.com/view/multiagent-hpp">Project Page</a> / 
-              <a href="https://ai.googleblog.com/2021/04/model-based-rl-for-decentralized-multi.html">Blog post</a>
-              ]
-              <br>
-              <p></p>
-              <p>In this work, we present hierarchical predictive planning (HPP) for decentralized multiagent navigation tasks. Our approach is trained in simulation and works in unseen settings both in simulation and in the real world (zero shot transfer)!</p>
-            </td>
-          </tr>
-
-          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/overcooked.png" alt="hpp" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2003.11778">
-                <papertitle>Too many cooks: Coordinating multi-agent collaboration through inverse planning</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt*</strong>,
-              Sarah Wu*,
-              <a href="https://sociology.uchicago.edu/directory/james-evans">James A. Evans</a>,
-              <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a>,
-              <a href="https://www.eecs.harvard.edu/~parkes/">David C. Parkes</a>,
-              <a href="http://www.mit.edu/~maxkw/">Max Kleiman-Weiner</a>
-              <br>
-              <em>Human-Like Machine Intelligence (book published with Oxford University Press)</em><br>
-              <em>Annual Meeting of the Cognitive Science Society (CogSci) 2020</em><br>
-              <em>International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS) 2020</em><br>
-              <em>Invited paper to OptLearnMAS Workshop at AAMAS 2020</em><br> 
-              <b style="color:red">Won best paper award for Computational Modeling for Higher Cognition at CogSci 2020!</b>
-              <br>
-                [
-              <a href="https://arxiv.org/abs/2003.11778">Paper</a> / 
-              <a href="https://www.youtube.com/watch?v=Fd4RcVaNthY">Video</a> /
-              <a href="https://github.com/rosewang2008/gym-cooking">Code</a>
-              ]
-              <p>We develop Bayesian Delegation, a decentralized multi-agent learning mechanism that enables agents to rapidly infer the sub-tasks of others by inverse planning.</p>
-            </td>
-          </tr>
-          
-          <tr onmouseout="font_stop()" onmouseover="font_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/rmaddpg.png" alt="rmaddpg" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/abs/2002.06684">
-                <papertitle>R-MADDPG for Partially Observable Environments and Limited Communication</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt</strong>,
-              <a href="http://mfe.scripts.mit.edu/portfolio/">Michael Everett</a>,
-              <a href="http://www.mit.edu/people/jhow/">Jonathan P. How</a>
-              <br>
-              <em>International Conference on Machine Learning (ICML) 2019, Reinforcement Learning for Real Life Workshop</em>
-              <br>
-                [
-              <a href="https://arxiv.org/abs/2002.06684">Paper</a> /
-              <a href="https://github.com/rosewang2008/rmaddpg">Code</a> /
-              <a href="https://sites.google.com/view/rmaddpg/home?authuser=0">Project Page</a>
-                    ]
-              <br>
-              <p></p>
-              <p>This paper introduces a deep recurrent multiagent actor-critic framework (R-MADDPG) for handling multiagent coordination under partial observable settings and limited communication.</p>
-            </td>
-          </tr>
-
-          <tr onmouseout="font_stop()" onmouseover="font_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/rc66.jpg" alt="rc66" style="border-style: none" width="200">
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://www.youtube.com/watch?v=dkhRkWSc8Xw&feature=youtu.be">
-                <papertitle>DRIV3N: Race to Autonomy</papertitle>
-              </a>
-              <br>
-              <strong>Neel P. Bhatt</strong>, Austin Floyd, Marwa Abdulhai, Luxas Novak, David Klee, Sean Patrick Kelley
-              <br>
-              <em>Robotics: Science and Systems I</em>, 2017. 
-              <br>
-                [
-              <a href="https://www.youtube.com/watch?v=dkhRkWSc8Xw&feature=youtu.be">Video</a> /
-              <a href="https://rosewang2008.github.io/rss-team3/">Project Page</a>
-              ]
-              <br>
-              <p></p>
-              <p>A whirlwind of an experience where my team and I developed a <b>fast</b>, <i>autonomous</i>, ~maze-solving~ racecars equipped with no machine learning technology and a decorative safety controller.</p>
-            </td>
-          </tr>
         </tbody></table>
 
       </td>
