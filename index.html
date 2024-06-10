@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/uw_logo.png">
+  <link rel="icon" type="image/png" href="images/profile_pic_v2.png">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -61,7 +61,7 @@
 
             <ul>
                 <li><b>May 2024</b>: <b>Talk @ DESTION Workshop and HP AI Labs</b> - I will be giving a talk at <a href="https://cps-vo.org/group/DESTION2024/program">DESTION workshop</a> and HP AI Labs on our fine-tuning work.</li>
-                <li><b>May 2024</b>: <b>Serving as Associate Editor</b> - I will be serving as an associate editor for <a href="https://ieee-itsc.org/2024/">IEEE ITSC 2024</a>.</li>
+                <li><b>May 2024</b>: <b>Serving as Associate Editor</b> - I will be serving as an associate editor for <a href="https://ieee-itsc.org/2024/">IEEE ITSC 2024</a> [<a href="https://www.youtube.com/watch?v=SjlhfRUpOvA&ab_channel=NeelBhatt/">Video</a>].</li>
                 <li><b>April 2024</b>: <b>Talk @ CMU</b> - I gave a talk on assured compositional RL for area and route search missions at the <a href="https://www.darpa.mil/program/assured-neuro-symbolic-learning-and-reasoning">DARPA ANSR</a> PI meeting #2 at CMU.</li>
                 <li><b>March 2024</b>: <b>Paper Preprint</b> - Our paper on <a href="https://arxiv.org/pdf/2404.00923">MM3DGS SLAM: Multi-modal 3D Gaussian Splatting for SLAM Using Vision, Depth, and Inertial Measurements</a> is up!</li>
                 <li><b>March 2024</b>: <b>Paper Preprint</b> - Our paper on <a href="https://arxiv.org/pdf/2403.16993">Comp4D: LLM-Guided Compositional 4D Scene Generation</a> is up!</li>
@@ -94,29 +94,33 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/MLSys_pipeline.png" alt="hpp" style="border-style: none" width="350">
+            <td style="padding:20px;width:25%;vertical-align:top">
+              <img src="images/MLSys-24.gif" alt="hpp" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/pdf/2310.18239">
+              <a href="https://proceedings.mlsys.org/paper_files/paper/2024/file/b0131b6ee02a00b03fc3320176fec8f5-Paper-Conference.pdf">
                 <papertitle>Fine-Tuning Language Models Using Formal Methods Feedback: A Use Case in Autonomous Systems</papertitle>
               </a>
               <br>
               <strong>Neel P. Bhatt*</strong>,
               <a href="https://oden.utexas.edu/people/directory/Yunhao%20Yang/">Yunhao Yang*</a>,
               <a href="https://oden.utexas.edu/people/directory/Tyler-Ingebrand/">Tyler Ingebrand*</a>,
-              <a href="hhttps://oden.utexas.edu/people/directory/William-Ward/">William Ward</a>,
+              <a href="https://oden.utexas.edu/people/directory/William-Ward/">William Ward</a>,
               <a href="https://oden.utexas.edu/people/directory/Steven-Carr/">Steven Carr</a>,
               <a href="https://www.ece.utexas.edu/people/faculty/atlas-wang">Atlas Wang</a>,
               <a href="https://oden.utexas.edu/people/directory/ufuk--topcu/">Ufuk Topcu</a>
               <br>
               <em>Conference on Machine Learning and Systems (MLSys), 2024</em>. 
               <br>
+              <b style="color:red">One of only 37 accepted papers!</b>
+              <br>
               [
-              <a href="https://arxiv.org/pdf/2310.18239">Paper</a> &nbsp/&nbsp
+              <a href="https://proceedings.mlsys.org/paper_files/paper/2024/file/b0131b6ee02a00b03fc3320176fec8f5-Paper-Conference.pdf">Paper</a> &nbsp/&nbsp
+              <a href="posters/MLSys-24.pdf">Poster</a> &nbsp/&nbsp
+              <a href="slides/MLSys-24.pdf">Slides</a> &nbsp/&nbsp
               <a href="https://www.youtube.com/watch?v=-N6ugXfHaFI&ab_channel=AsimMunawar">Video</a>
                ]
-              <p>Although pre-trained language models encode generic knowledge beneficial for planning and control, they may fail to generate appropriate control policies for domain-specific tasks. We present a fully automated approach to fine-tune pre-trained language models for applications in autonomous systems, bridging the gap between generic knowledge and domain-specific requirements while reducing cost. The method synthesizes automaton-based controllers from pre-trained models guided by natural language task descriptions. These controllers are verifiable against independently provided specifications within a world model, which can be abstract or obtained from a high-fidelity simulator. Controllers with high compliance with the desired specifications receive higher ranks, guiding the iterative fine-tuning process. We provide quantitative evidences, primarily in autonomous driving, to demonstrate the method’s effectiveness across multiple tasks. The results indicate an improvement in percentage of specifications satisfied by the controller from 60% to 90%.
+              <p>We present a fully automated approach to fine-tune pre-trained language models for applications in autonomous systems, bridging the gap between generic knowledge and domain-specific requirements while reducing cost. The method synthesizes automaton-based controllers from pre-trained models guided by natural language task descriptions that are formally verified. Controllers with high compliance of the desired specifications receive higher ranks, guiding the iterative fine-tuning process. We provide quantitative evidence demonstrating an improvement in percentage of specifications satisfied from <strong>60%</strong> to <strong>90%</strong>.
               </p>
             </td>
           </tr>
@@ -124,7 +128,95 @@
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/mpc-pf_its.gif" alt="hpp" style="border-style: none" width="350">
+              <img src="images/MM3DGS.gif" alt="hpp" style="border-style: none" width="400">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2404.00923">
+                <papertitle>MM3DGS SLAM: Multi-modal 3D Gaussian Splatting for SLAM</papertitle>
+              </a>
+              <br>
+              <a href="https://www.linkedin.com/in/lisong-codey-sun/">Lisong C. Sun*</a>,
+              <strong>Neel P. Bhatt*</strong>,
+              <a href="https://www.linkedin.com/in/jonathanliu88/">Jonathan C. Lu</a>,
+              <a href="https://zhiwenfan.github.io/">Zhiwen Fan</a>,
+              <a href="https://www.ece.utexas.edu/people/faculty/atlas-wang">Atlas Wang</a>,
+              <a href="https://www.ae.utexas.edu/people/faculty/faculty-directory/humphreys">Todd E. Humphreys</a>,
+              <a href="https://oden.utexas.edu/people/directory/ufuk--topcu/">Ufuk Topcu</a>
+              <br>
+              <em>Under submission at IROS 2024</em>. 
+              <br>
+              [
+              <a href="https://arxiv.org/pdf/2404.00923">Paper</a> &nbsp/&nbsp
+              <a href="posters/MM3DGS.pdf">Poster</a> &nbsp/&nbsp
+              <a href="slides/MM3DGS.pdf">Slides</a> &nbsp/&nbsp
+              <a href="https://www.youtube.com/watch?v=drf6UxehChE&ab_channel=NeelBhatt">Video</a> &nbsp/&nbsp
+              <a href="https://vita-group.github.io/MM3DGS-SLAM/">Webpage</a>
+               ]
+              <p>Our method, MM3DGS, addresses the limitations of prior neural radiance field-based representations by enabling faster rendering, scale awareness, and improved trajectory tracking. Our framework enables keyframe-based mapping and tracking utilizing loss functions that incorporate relative pose transformations from pre-integrated inertial measurements, depth estimates, and measures of photometric rendering quality. Experimental evaluation on several scenes shows a <strong>3x</strong> improvement in tracking and <strong>5%</strong> improvement in photometric rendering quality compared to the current 3DGS SLAM state-of-the-art, while allowing real-time rendering.
+              </p>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/Comp4D_LLM.gif" alt="hpp" style="border-style: none" width="400">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/2403.16993">
+                <papertitle>Comp4D: LLM-Guided Compositional 4D Scene Generation</papertitle>
+              </a>
+              <br>
+              <a href="https://ir1d.github.io/">Dejia Xu*</a>,
+              <a href="https://scholar.google.com/citations?user=mrOHvI8AAAAJ&hl=en">Hanwen Liang*</a>,
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://alexhu.top/">Hezhen Hu</a>,
+              <a href="https://scholar.google.com/citations?user=XcxDA14AAAAJ&hl=en/">Hanxue Liang</a>,
+              <a href="https://www.ece.utoronto.ca/people/plataniotis-k-n/">Konstantinos N. Plataniotis</a>,
+              <a href="https://www.ece.utexas.edu/people/faculty/atlas-wang">Atlas Wang</a>
+              <br>
+              <em>Under submission</em>. 
+              <br>
+              [
+              <a href="https://arxiv.org/pdf/2403.16993">Paper</a> &nbsp/&nbsp
+              <a href="https://www.youtube.com/watch?v=9q8SV1Xf_Xw&t=281s&ab_channel=DejiaXu">Video</a> &nbsp/&nbsp
+              <a href="https://vita-group.github.io/Comp4D/">Webpage</a>
+               ]
+              <p>Our method, MM3DGS, addresses the limitations of prior neural radiance field-based representations by enabling faster rendering, scale awareness, and improved trajectory tracking. Our framework enables keyframe-based mapping and tracking utilizing loss functions that incorporate relative pose transformations from pre-integrated inertial measurements, depth estimates, and measures of photometric rendering quality. Experimental evaluation on several scenes shows a <strong>3x</strong> improvement in tracking and <strong>5%</strong> improvement in photometric rendering quality compared to the current 3DGS SLAM state-of-the-art, while allowing real-time rendering.
+              </p>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/Frontiers-24.png" alt="hpp" style="border-style: none" width="400">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://www.readcube.com/articles/10.3389/frobt.2024.1212070">
+                <papertitle>A Survey on 3D Object Detection in Real-time for Autonomous Driving</papertitle>
+              </a>
+              <br>
+              <a href="https://scholar.google.com/citations?user=nUF0J2IAAAAJ&hl=en">Marcelo Contreras</a>,
+              <a href="https://in.linkedin.com/in/aayush-jain-406315202">Aayush Jain</a>,
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://scholar.google.co.in/citations?user=Bol-rwwAAAAJ&hl=en">Arunava Banerjee</a>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>
+              <br>
+              <em>Frontiers in Robotics and AI, 2024</em>. 
+              <br>
+              [
+              <a href="https://www.readcube.com/articles/10.3389/frobt.2024.1212070">Paper</a>
+               ]
+              <p>We provide a comprehensive survey and quantitative comparisons with state-of-the-art 3D object detection methodologies aiming to tackle varying weather conditions, multi-modality, multi-camera perspective, and their respective metrics associated to different difficulty categories. We identify several research gaps and potential future directions in visual-based 3D object detection approaches for autonomous driving.
+              </p>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/mpc-pf_its.gif" alt="hpp" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://ieeexplore.ieee.org/document/10046400">
@@ -143,14 +235,65 @@
               <a href="https://ieeexplore.ieee.org/document/10046400">Paper</a> &nbsp/&nbsp
               <a href="https://www.youtube.com/watch?v=56sD-qsREBY&list=PLQG3T3nkAnJ8qxJz8-jpqMEWN5JEh0Wt3&index=3&ab_channel=NeelBhatt">Video</a>
                ]
-              <p>We propose MPC-PF, a model that embeds surrounding object and road map information in the form of a potential field to model agent-agent and agent-space interactions. We show the efficacy of our multi-object trajectory prediction method both qualitatively and quantitatively achieving state-of-the-art results on the Waymo Open Motion Dataset and also on other common urban driving scenarios where social norms must be followed.
+              <p>We propose MPC-PF, a model that embeds surrounding object and road map information in the form of a potential field to model agent-agent and agent-space interactions. We show the efficacy of our multi-object trajectory prediction method both qualitatively and quantitatively achieving state-of-the-art results on the Waymo Open Motion Dataset and other common urban driving scenarios.
               </p>
             </td>
           </tr>
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/iros_poster.gif" alt="hpp" style="border-style: none" width="350">
+              <img src="images/integrated-inertial-lidar.gif" alt="hpp" style="border-style: none" width="400">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10194984">
+                <papertitle>Integrated Inertial-LiDAR-Based Map Matching Localization for Varying Environments</papertitle>
+              </a>
+              <br>
+              <a href="https://scholar.google.com/citations?user=vCYqMTIAAAAJ&hl=en">Xin Xia</a>,
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/akhajepo">Amir Khajepour</a>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>
+              <br>
+              <em>Transactions on Intelligent Vehicles (T-IV), 2023</em>. 
+              <br>
+              [
+              <a href="https://ieeexplore.ieee.org/abstract/document/10194984">Paper</a> &nbsp/&nbsp
+              <a href="https://www.youtube.com/watch?v=7HaQQtZYQh4&ab_channel=NeelBhatt">Video</a>
+               ]
+              <p> Leveraging a global navigation satellite system, inertial navigation system, and 3D LiDAR point clouds, a novel light point cloud map generation method, which only keeps the necessary point clouds (i.e., buildings and roads regardless of vegetation varying with seasonal change), is proposed. Thorough experiments in winter and summer confirm the advantages of integrating the proposed light point cloud map generation with the dead reckoning model in terms of accuracy and reduced computational complexity.
+              </p>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/SVO-23.gif" alt="hpp" style="border-style: none" width="400">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10421981">
+                <papertitle>A Stereo Visual Odometry Framework with Augmented Perception for Dynamic Urban Environments</papertitle>
+              </a>
+              <br>
+              <a href="https://scholar.google.com/citations?user=nUF0J2IAAAAJ&hl=en">Marcelo Contreras</a>,
+              <strong>Neel P. Bhatt</strong>,
+              <a href="https://apps.ualberta.ca/directory/person/ehashemi">Ehsan Hashemi</a>
+              <br>
+              <em>Intelligent Transportation Systems Conference (ITSC), 2023</em>. 
+              <br>
+              [
+              <a href="https://ieeexplore.ieee.org/abstract/document/10421981">Paper</a> &nbsp/&nbsp
+              <a href="slides/SVO-23.pdf">Slides</a>
+               ]
+              <p> We propose a semantic-aware stereo visual odometry framework wherein feature extraction is performed over a static region-of-interest generated through object detection and instance segmentation on static street objects. Extensive real driving sequences in various dynamic urban environments with varying sequence lengths confirms excellent performance and computational efficiency attributed to using semantic-aware feature tracking.
+              </p>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:top">
+              <img src="images/iros_poster.gif" alt="hpp" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://ieeexplore.ieee.org/abstract/document/9981046">
@@ -167,14 +310,14 @@
               <a href="https://ieeexplore.ieee.org/abstract/document/9981046">Paper</a> &nbsp/&nbsp
               <a href="https://www.youtube.com/watch?v=4DR7fqruLGo&list=PLQG3T3nkAnJ8qxJz8-jpqMEWN5JEh0Wt3&index=1&ab_channel=NeelBhatt">Video</a>
                ]
-              <p>Predicting object motion behaviour is a challenging but crucial task for safe decision making and path planning for an autonomous vehicle. We tackle this problem by introducing MPC-PF: a novel potential field-based trajectory predictor that incorporates social interaction and is able to tradeoff between inherent model biases across the prediction horizon. Through evaluation on a variety of common urban driving scenarios, we show that our model is capable of producing accurate predictions for short and long term timesteps and demonstrate significance of model architecture via an ablation study.
+              <p>Predicting object motion behaviour is a challenging but crucial task for safe decision-making and planning for an autonomous vehicle. We tackle this problem by introducing MPC-PF: a novel potential field-based trajectory predictor that incorporates social interaction and is able to tradeoff between inherent model biases across the prediction horizon. Through evaluation on a variety of common urban driving scenarios, we show that our model produces accurate short and long-term predictions.
               </p>
             </td>
           </tr>
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/augmented_case.png" alt="hpp" style="border-style: none" width="350">
+              <img src="images/augmented_case.png" alt="hpp" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://ieeexplore.ieee.org/abstract/document/9926595">
@@ -189,19 +332,19 @@
               <br>
               [
               <a href="https://ieeexplore.ieee.org/abstract/document/9926595">Paper</a> &nbsp/&nbsp
-              <a href="https://youtu.be/1bjuX6VuZjs">Video</a> &nbsp/&nbsp
-              <a href="slides/case_presentation.pdf">Slides</a>
+              <a href="slides/case_presentation.pdf">Slides</a> &nbsp/&nbsp
+              <a href="https://youtu.be/1bjuX6VuZjs">Video</a>
                ]
-              <p>We develop a robust infrastructure-aided localization framework using only a single low-cost camera with a fisheye lens. To reduce the computational load, we use an ROI alongside estimated depth to re-project the robot pointcloud cluster with geometrical outlier detection. We use this position and depth information in an uncertainty-aware observer with adaptive covariance allocation and bounded estimation error to deal with position measurement noises at the limits of the field of view, and intermittent occlusion in dynamic environments. Moreover, the aforementioned motion model, uses a learning-based prediction model for input estimation based on a moving buffer of the robot position. Several experiments with occlusion and intermittent visual disruption/detection confirm effectiveness of the developed framework in re-initializing the estimation process after failure in the visual detection, and handling temporary data loss due to sensor faults or changes in lighting conditions.
+              <p>We develop a robust infrastructure-aided localization framework using only a single low-cost camera with a fisheye lens. To reduce the computational load, we use an ROI alongside estimated depth to re-project the robot pointcloud cluster with geometrical outlier detection. We use this position and depth information in an uncertainty-aware observer with adaptive covariance allocation and bounded estimation error to deal with position measurement noises at the limits of the field of view, and intermittent occlusion in dynamic environments. Moreover, we use a learning-based prediction model for input estimation based on a moving buffer of the robot position. Several experiments with occlusion and intermittent visual disruption/detection confirm effectiveness of the developed framework in re-initializing the estimation process after failure in the visual detection, and handling temporary data loss due to sensor faults or changes in lighting conditions.
               </p>
             </td>
           </tr>
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/infra_robotics_2.png" alt="hpp" style="border-style: none" width="350">
+              <img src="images/infra_robotics_2.png" alt="hpp" style="border-style: none" width="400">
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding:20px;width:75%;vertical-align:top">
               <a href="https://www.mdpi.com/2218-6581/11/4/82">
                 <papertitle>Infrastructure-Aided Localization and State Estimation for Autonomous Mobile Robots</papertitle>
               </a>
@@ -222,7 +365,7 @@
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/gpr_smcs.png" alt="hpp" style="border-style: none" width="350">
+              <img src="images/gpr_smcs.png" alt="hpp" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/pdf/2101.06901">
@@ -246,7 +389,7 @@
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/mhe_itsc.gif" alt="hpp" style="border-style: none" width="350">
+              <img src="images/mhe_itsc.gif" alt="hpp" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://ieeexplore.ieee.org/abstract/document/9294306">
@@ -285,6 +428,7 @@
               </a>
               <br>
               [
+              <a href="https://arxiv.org/pdf/2312.00938">Paper</a> &nbsp/&nbsp
               <a href="https://uwaterloo.ca/watonobus/">Webpage</a> &nbsp/&nbsp
               <a href="https://www.youtube.com/watch?v=G0T5sKgqpLM&list=PLQG3T3nkAnJ8qxJz8-jpqMEWN5JEh0Wt3&index=2&ab_channel=WaterlooEngineering">Video</a>               ]
               <p>Our team started the WATonoBus autonomous shuttle project in 2018 and has since developed 2 such fully equipped shuttles and is near completion of the third shuttle. The WATonoBus is a platform that contains fully in-house equipped hardware and software stack and has been approved as part of the Ministry of Transportation Ontario’s Autonomous Vehicle Pilot Program currently providing daily free and fully autonomous service to passengers at the University of Waterloo. The University of Waterloo's Ring Road is a 2.7 km curvy road with many intersections and pedestrian crossings that represent an urban driving environment with several pedestrians, cyclists, and vehicles. The WATonoBus project is different from prior project in that it is aimed to operate in all weather conditions including adverse rain, fog, and snow.
@@ -326,6 +470,23 @@
               [
               <a href="https://autonomy.oden.utexas.edu/news/center-autonomy-volunteers-gencyber-tacc-camps">Webpage</a>               ]
               <p>In December of 2023, the Texas Advanced Computing Center (TACC) hosted two engaging cybersecurity events, "GenCyber Back@TACC" and "Level UP GenCyber Back@TACC," both aimed at educating high school students in various aspects of coding and cybersecurity. I contributed by motivating students envision a future in both cybersecurity and the broader selection of STEM fields. I also helped by facilitating the learning process, answering questions, and engaging high school students in discussions about their personal experiences from their academic journeys in STEM, thereby encouraging students to consider future studies and careers.
+              </p>
+            </td>
+          </tr>
+
+
+          <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/High_school_FRC_outreach.png" alt="hpp" style="border-style: none" width="350">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://autonomy.oden.utexas.edu/learning-together-del-valle-students-experience-center-autonomy">
+                <papertitle>Del Valle High School FRC Team Tours / TACC and Center for Autonomy</papertitle>
+              </a>
+              <br>
+              [
+              <a href="https://autonomy.oden.utexas.edu/learning-together-del-valle-students-experience-center-autonomy">Webpage</a>               ]
+              <p>This event, hosted by Center for Autonomy, invited students from the Del Valle Independent School District (Travis County, TX), out of which 84.4% are economically disadvantaged. I presented to the students a high-level overview of what academic research looks like through my research on multi-modal 3D Guassian splatting for simultaneous localization and mapping and its implementation on the Clearpath jackal robots. I used TACC’s high resolution screens to deliver my presentation in an interactive manner. I shared my undergrad, internship, PhD, and postdoc experiences with the students and gave them a personal view of how each one led to the next career step so that they could understand potential career trajectories. I motivated the students to ask questions and answered their questions ranging from how I got into robotics through First Robotics Challenge (FRC) – their school participates in the same competition, what I do not like about industry, and failures through my career journey.
               </p>
             </td>
           </tr>
