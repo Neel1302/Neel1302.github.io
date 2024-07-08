@@ -134,6 +134,13 @@ span.highlight {
     border: 1px solid #000
 }*/
 
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700
+}
+
 .label {
     display: inline;
     padding: .2em .6em .2em;
