@@ -19,6 +19,7 @@
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/profile_pic_v2.png">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -32,6 +33,7 @@
 </script>
 
 <body>
+  <div id="network-bg"></div>
   <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -192,7 +194,7 @@
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:top">
-              <img src="images/vln_zero.gif" alt="hpp" style="border-style: none" width="400">
+              <img src="images/vln_zero.gif" alt="VLN-Zero demo" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2509.18592" target="_blank">
@@ -220,7 +222,7 @@
 
           <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:top">
-              <img src="images/repv.gif" alt="hpp" style="border-style: none" width="400">
+              <img src="images/repv.gif" alt="RepV animation" style="border-style: none" width="400">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://arxiv.org/abs/2510.26935" target="_blank">
@@ -705,6 +707,61 @@
     </tr>
   </table>
   Template adopted from <a href="https://jonbarron.info/" target="_blank">here</a>.
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.particlesJS) {
+        particlesJS('network-bg', {
+          particles: {
+            number: {
+              value: 55,
+              density: {
+                enable: true,
+                value_area: 900
+              }
+            },
+            color: { value: '#9c9c9c' },
+            shape: { type: 'circle' },
+            opacity: {
+              value: 0.45,
+              random: true
+            },
+            size: {
+              value: 3,
+              random: true
+            },
+            line_linked: {
+              enable: true,
+              distance: 160,
+              color: '#b7b7b7',
+              opacity: 0.5,
+              width: 1
+            },
+            move: {
+              enable: true,
+              speed: 1.1,
+              direction: 'none',
+              out_mode: 'out'
+            }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: { enable: true, mode: 'grab' },
+              onclick: { enable: false },
+              resize: true
+            },
+            modes: {
+              grab: {
+                distance: 200,
+                line_linked: { opacity: 0.7 }
+              }
+            }
+          },
+          retina_detect: true
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
