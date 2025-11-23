@@ -150,7 +150,7 @@ label {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    vertical-align: ;
+    vertical-align: baseline;
     border-radius: .25em
 }
 
@@ -197,6 +197,33 @@ a.label:hover {
     background-color: #449d44
 }
 
+.label-paper {
+    background-color: #5cb85c
+}
+
+.label-paper[href]:focus,
+.label-paper[href]:hover {
+    background-color: #449d44
+}
+
+.label-talk {
+    background-color: #2563eb
+}
+
+.label-talk[href]:focus,
+.label-talk[href]:hover {
+    background-color: #1d4ed8
+}
+
+.label-milestone {
+    background-color: #e53e3e
+}
+
+.label-milestone[href]:focus,
+.label-milestone[href]:hover {
+    background-color: #c53030
+}
+
 .label-info {
     background-color: #5bc0de
 }
@@ -236,4 +263,58 @@ a.label:hover {
 
 #network-bg canvas {
   display: block;
+}
+
+.filter-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+.filter-btn.active {
+  background-color: #1772d0;
+  color: #fff;
+  border-color: #1772d0;
+}
+
+.filter-btn.active:hover {
+  background-color: #155ba0;
+  border-color: #155ba0;
+}
+
+.news-container {
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+}
+
+.news-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
