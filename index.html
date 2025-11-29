@@ -34,6 +34,18 @@
 
 <body>
   <div id="network-bg"></div>
+  
+  <!-- Tab Navigation -->
+  <div class="tab-navigation" style="position: sticky; top: 0; z-index: 100; background-color: #fff; padding: 8px 0; margin-bottom: 15px;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+      <button class="tab-btn active" onclick="scrollToSection('section-news', this)">News</button>
+      <button class="tab-btn" onclick="scrollToSection('section-projects', this)">Projects</button>
+      <button class="tab-btn" onclick="scrollToSection('section-publications', this)">Publications</button>
+      <button class="tab-btn" onclick="scrollToSection('section-outreach', this)">Outreach</button>
+      <button class="tab-btn" onclick="scrollToSection('section-media', this)">Media</button>
+    </div>
+  </div>
+
   <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -43,7 +55,7 @@
               <p style="text-align:center">
                 <name><b>Neel</b> P. Bhatt</name>
               </p>
-              <p>I am currently a <a href="https://autonomy.oden.utexas.edu/profiles/neel-bhatt" target="_blank">Research Scientist</a> at the <a href="https://autonomy.oden.utexas.edu/" target="_blank">Center for Autonomy</a> working with Professors <a href="https://www.ece.utexas.edu/people/faculty/atlas-wang" target="_blank">Atlas Wang</a> and <a href="https://oden.utexas.edu/people/directory/ufuk--topcu/" target="_blank">Ufuk Topcu</a>. I am part of the <a href="https://autonomy.oden.utexas.edu/Groups/autonomous-systems-group" target="_blank">Autonomous Systems Group</a> and the <a href="https://vita-group.github.io/" target="_blank">VITA Research Group</a> at the University of Texas at Austin. I am developing neuro-symbolic architectures with research centered at the intersection of generative AI, assured active perception, prediction, and trustworthy sequential decision making for autonomous systems.</p>
+              <p>I am currently a <a href="https://autonomy.oden.utexas.edu/profiles/neel-bhatt" target="_blank">Research Scientist</a> at the <a href="https://autonomy.oden.utexas.edu/" target="_blank">Center for Autonomy</a> working with Professors <a href="https://www.ece.utexas.edu/people/faculty/atlas-wang" target="_blank">Atlas Wang</a> and <a href="https://oden.utexas.edu/people/directory/ufuk--topcu/" target="_blank">Ufuk Topcu</a>. I am part of the <a href="https://autonomy.oden.utexas.edu/Groups/autonomous-systems-group" target="_blank">Autonomous Systems Group</a> and the <a href="https://vita-group.github.io/" target="_blank">VITA Research Group</a> at the University of Texas at Austin. I am developing neuro-symbolic architectures with research centered at the intersection of generative AI, assured active perception, prediction, and trustworthy sequential decision making for autonomous systems. At UT, I lead two DARPA projects on verification-centric neurosymbolic AI for embodied autonomy.</p>
               <p>I received my PhD in Mechatronics Engineering from University of Waterloo in 2023. During my PhD, I led efforts on the <a href="https://uwaterloo.ca/watonobus/" target="_blank">WATonoBus project</a> at <a href="https://uwaterloo.ca/mechatronic-vehicle-systems-lab/" target="_blank">MVS Lab</a> working on software and algorithmic development of perception and prediction modules required for <a href="https://uwaterloo.ca/news/media/university-waterloo-launches-canadas-first-driverless" target="_blank">Canada’s first autonomous shuttle bus</a> approved via the ministry’s autonomous vehicle pilot. During this time, I also interned at <a href="https://www.gm.com/company/facilities/global-technical-center" target="_blank">GM R&D</a> where I worked on deep learning-based state estimation.</p>
               <p>I have also concurrently been a visiting research scholar since 2021 at the <a href="https://sites.google.com/view/ehsan-hashemi-uwaterloo/home" target="_blank">NODE Lab</a> at University of Alberta working on NODE lab's autonomous vehicle.</p>
               <p> Prior to this, I received my Bachelor's degree in Mechanical Engineering (I was directly admitted to a PhD from Bachelor's) in 2018 with focus on Mechatronics and Robotics from University of Toronto. During this time, I conducted research with Professor <a href="https://www.mie.utoronto.ca/faculty_staff/sun/" target="_blank">Yu Sun</a> on micro and nano robotics and interned at <a href="https://clearpathrobotics.com/" target="_blank">Clearpath Robotics</a> and was awarded <a href="https://www.nserc-crsng.gc.ca/students-etudiants/ug-pc/usra-brpc_eng.asp" target="_blank">NSERC Research Awards</a> for both.</p>
@@ -68,6 +80,9 @@
               </p>
               <p>
               </p>
+
+        <!-- News Section -->
+        <div id="section-news" class="content-section">
         <h2>News</h2>
 
             <div class="news-container">
@@ -118,8 +133,10 @@
             </ul>
             </div>
             <!--<h2>Research 	&#129302;</h2>-->
+        </div>
 
-
+        <!-- Featured Projects Section -->
+        <div id="section-projects" class="content-section">
         <h2>Featured Projects</h2>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
@@ -159,7 +176,10 @@
           </tr>
 
         </tbody></table>
+        </div>
 
+        <!-- Selected Publications Section -->
+        <div id="section-publications" class="content-section">
         <h2>Selected Publications</h2>
         <div style="margin-bottom: 20px;">
           <button class="filter-btn active" onclick="filterPublications('all', this)">All</button>
@@ -673,7 +693,10 @@
           </tr>
 
         </tbody></table>
+        </div>
 
+        <!-- Outreach Section -->
+        <div id="section-outreach" class="content-section">
         <h2>Outreach</h2>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
@@ -759,7 +782,10 @@
           </tr>
 
         </tbody></table>
+        </div>
 
+        <!-- Media Coverage Section -->
+        <div id="section-media" class="content-section">
         <h2>Media Coverage</h2>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
@@ -857,12 +883,38 @@
           </tr>
 
         </tbody></table>
+        </div>
 
       </td>
     </tr>
   </table>
   Template adopted from <a href="https://jonbarron.info/" target="_blank">here</a>.
   <script>
+    // Section navigation function - scrolls to section
+    function scrollToSection(sectionId, button) {
+      // Remove active class from all tab buttons
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      tabButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Add active class to clicked button
+      if (button) {
+        button.classList.add('active');
+      }
+      
+      // Scroll to the section
+      const section = document.getElementById(sectionId);
+      if (section) {
+        // Get the offset position of the section
+        const offsetTop = section.offsetTop - 20; // 20px offset for better visibility
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
+
     // Publication filtering function - must be global for onclick handlers
     function filterPublications(category, button) {
       // Remove active class from all buttons
