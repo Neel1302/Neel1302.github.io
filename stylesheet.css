@@ -356,3 +356,226 @@ a.label:hover {
 .content-section {
   scroll-margin-top: 20px;
 }
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Adjust main container */
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Make main content table responsive */
+  table[style*="max-width:900px"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Adjust main container padding */
+  table {
+    padding: 0 10px;
+  }
+  
+  /* Make profile section stack vertically */
+  table tbody tr td[style*="width:63%"],
+  table tbody tr td[style*="width:40%"] {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+  }
+  
+  /* Center profile image on mobile */
+  table tbody tr td[style*="width:40%"] {
+    text-align: center;
+  }
+  
+  /* Adjust name font size */
+  name {
+    font-size: 24px;
+  }
+  
+  /* Adjust heading font size */
+  heading {
+    font-size: 18px;
+  }
+  
+  /* Make all images responsive - override inline width styles */
+  img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  /* Tab navigation container adjustments */
+  .tab-navigation {
+    padding: 5px 0 !important;
+  }
+  
+  .tab-navigation > div {
+    padding: 0 10px !important;
+  }
+  
+  /* Make table cells stack for publications/projects/media */
+  table tbody tr {
+    display: block;
+  }
+  
+  table tbody tr td[style*="width:25%"],
+  table tbody tr td[style*="width:75%"] {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px !important;
+    vertical-align: top !important;
+  }
+  
+  /* Handle colspan cells */
+  table tbody tr td[colspan] {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  /* Adjust headings */
+  h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  
+  /* Center images in media/projects sections on mobile */
+  table tbody tr td[style*="width:25%"] img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  /* Adjust font sizes */
+  body, td, th, tr, p, a {
+    font-size: 13px;
+  }
+  
+  strong {
+    font-size: 13px;
+  }
+  
+  papertitle {
+    font-size: 13px;
+  }
+  
+  /* Adjust tab navigation for mobile */
+  .tab-navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px 0;
+  }
+  
+  .tab-btn {
+    font-size: 11px;
+    padding: 5px 8px;
+    margin: 2px;
+  }
+  
+  /* Adjust news container */
+  .news-container {
+    max-height: none;
+    padding-right: 0;
+  }
+  
+  /* Adjust filter buttons */
+  .filter-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin: 3px;
+  }
+  
+  /* Adjust label sizes */
+  .label {
+    font-size: 70%;
+    padding: .15em .5em .15em;
+  }
+  
+  /* Adjust content section scroll margin */
+  .content-section {
+    scroll-margin-top: 50px;
+  }
+  
+  /* Reduce padding in table cells */
+  table tbody tr td {
+    padding: 10px 5px !important;
+  }
+  
+  /* Make links wrap better */
+  p a {
+    word-break: break-word;
+  }
+  
+  /* Adjust profile photo container */
+  .one, .two {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Extra small devices */
+  name {
+    font-size: 20px;
+  }
+  
+  heading {
+    font-size: 16px;
+  }
+  
+  body, td, th, tr, p, a {
+    font-size: 12px;
+  }
+  
+  strong {
+    font-size: 12px;
+  }
+  
+  papertitle {
+    font-size: 12px;
+  }
+  
+  .tab-btn {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+  
+  .label {
+    font-size: 65%;
+  }
+  
+  /* Reduce padding even more */
+  table tbody tr td {
+    padding: 8px 3px !important;
+  }
+  
+  /* Make profile photo smaller */
+  .one, .two {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Better spacing for list items */
+  ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  
+  /* Adjust paragraph spacing */
+  p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+}
