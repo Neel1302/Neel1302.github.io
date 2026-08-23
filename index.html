@@ -43,6 +43,7 @@
       <button class="tab-btn" onclick="scrollToSection('section-publications', this)">Publications</button>
       <button class="tab-btn" onclick="scrollToSection('section-outreach', this)">Outreach</button>
       <button class="tab-btn" onclick="scrollToSection('section-media', this)">Media</button>
+      <button class="tab-btn" id="tab-openings" onclick="showOpenings(this)">Openings</button>
     </div>
   </div>
 
@@ -55,9 +56,9 @@
               <p style="text-align:center">
                 <name><b>Neel</b> P. Bhatt</name>
               </p>
-              <p>I am currently a <a href="https://autonomy.oden.utexas.edu/profiles/neel-bhatt" target="_blank">Research Scientist</a> at the <a href="https://autonomy.oden.utexas.edu/" target="_blank">Center for Autonomy</a> working with Professors <a href="https://www.ece.utexas.edu/people/faculty/atlas-wang" target="_blank">Atlas Wang</a> and <a href="https://oden.utexas.edu/people/directory/ufuk--topcu/" target="_blank">Ufuk Topcu</a>. I am part of the <a href="https://autonomy.oden.utexas.edu/Groups/autonomous-systems-group" target="_blank">Autonomous Systems Group</a> and the <a href="https://vita-group.github.io/" target="_blank">VITA Research Group</a> at the University of Texas at Austin. I am developing neuro-symbolic architectures with research centered at the intersection of generative AI, assured active perception, prediction, and trustworthy sequential decision making for autonomous systems. At UT, I lead two DARPA projects on verification-centric neurosymbolic AI for embodied autonomy.</p>
-              <p>I received my PhD in Mechatronics Engineering from University of Waterloo in 2023. During my PhD, I led efforts on the <a href="https://uwaterloo.ca/watonobus/" target="_blank">WATonoBus project</a> at <a href="https://uwaterloo.ca/mechatronic-vehicle-systems-lab/" target="_blank">MVS Lab</a> working on software and algorithmic development of perception and prediction modules required for <a href="https://uwaterloo.ca/news/media/university-waterloo-launches-canadas-first-driverless" target="_blank">Canada’s first autonomous shuttle bus</a> approved via the ministry’s autonomous vehicle pilot. During this time, I also interned at <a href="https://www.gm.com/company/facilities/global-technical-center" target="_blank">GM R&D</a> where I worked on deep learning-based state estimation.</p>
-              <p>I have also concurrently been a visiting research scholar since 2021 at the <a href="https://sites.google.com/view/ehsan-hashemi-uwaterloo/home" target="_blank">NODE Lab</a> at University of Alberta working on NODE lab's autonomous vehicle.</p>
+              <p>I am current an <a href="https://syse.utdallas.edu/ourteam/staff/neel-p-bhatt/" target="_blank">Assistant Professor</a> in the <a href="https://engineering.utdallas.edu/" target="_blank">Erik Jonsson School of Engineering and Computer Science</a> at the <a href="https://www.utdallas.edu/" target="_blank">University of Texas at Dallas</a>. I am developing neuro-symbolic architectures with research centered at the intersection of generative AI, assured active perception, prediction, and trustworthy sequential decision making for autonomous systems.</p>
+              <p>I was a <a href="https://autonomy.oden.utexas.edu/profiles/neel-bhatt" target="_blank">Research Scientist</a> at the <a href="https://autonomy.oden.utexas.edu/" target="_blank">Center for Autonomy</a> at the University of Texas at Austin. At UT, I led two DARPA projects on verification-centric neurosymbolic AI for embodied autonomy.</p>
+              <p>I received my PhD in Mechatronics Engineering from University of Waterloo in 2023. During my PhD, I led efforts on the <a href="https://uwaterloo.ca/watonobus/" target="_blank">WATonoBus project</a> at <a href="https://uwaterloo.ca/mechatronic-vehicle-systems-lab/" target="_blank">MVS Lab</a> working on software and algorithmic development of perception and prediction modules required for <a href="https://uwaterloo.ca/news/media/university-waterloo-launches-canadas-first-driverless" target="_blank">Canada’s first autonomous shuttle bus</a> approved via the ministry’s autonomous vehicle pilot. During this time, I also interned at <a href="https://www.gm.com/company/facilities/global-technical-center" target="_blank">GM R&D</a> where I worked on deep learning-based state estimation. I have also concurrently been a visiting research scholar since 2021 at the <a href="https://sites.google.com/view/ehsan-hashemi-uwaterloo/home" target="_blank">NODE Lab</a> at University of Alberta working on NODE lab's autonomous vehicle.</p>
               <p> Prior to this, I received my Bachelor's degree in Mechanical Engineering (I was directly admitted to a PhD from Bachelor's) in 2018 with focus on Mechatronics and Robotics from University of Toronto. During this time, I conducted research with Professor <a href="https://www.mie.utoronto.ca/faculty_staff/sun/" target="_blank">Yu Sun</a> on micro and nano robotics and interned at <a href="https://clearpathrobotics.com/" target="_blank">Clearpath Robotics</a> and was awarded <a href="https://www.nserc-crsng.gc.ca/students-etudiants/ug-pc/usra-brpc_eng.asp" target="_blank">NSERC Research Awards</a> for both.</p>
               <p style="text-align:center">
                     [
@@ -69,7 +70,7 @@
               </p>
             </td>
             <td style="padding:1.5%;width:40%;max-width:40%">
-              <a href="images/profile_pic_v2.png" target="_blank"><img style="width:100%;max-width:100%" alt="profile photo" src="images/profile_pic_v2.png" class="hoverZoomLink"></a>
+              <a href="images/profile_pic_v3.png" target="_blank"><img style="width:100%;max-width:100%" alt="profile photo" src="images/profile_pic_v3.png" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -83,7 +84,7 @@
 
         <!-- News Section -->
         <div id="section-news" class="content-section">
-        <p style="text-align: center; font-style: italic; margin-top: -20px; margin-bottom: 20px; color: #555;">I am open to discussions regarding faculty opportunities starting in 2026.</p>
+        <p id="recruiting-note" style="text-align: center; font-style: italic; margin-top: -20px; margin-bottom: 20px; color: #555;">I am open to discussions regarding opportunities for self-motivated <a href="#openings" onclick="showOpenings(document.getElementById('tab-openings')); return false;">PhD and Masters students, visiting students, and interns</a> starting Fall 2026/Spring 2027.</p>
         <h2>News</h2>
 
             <div class="news-container">
@@ -936,33 +937,107 @@
         </tbody></table>
         </div>
 
+        <!-- Openings Section -->
+        <div id="section-openings" class="content-section" style="display:none;">
+          <h2>For Prospective Students</h2>
+
+          <h3>Open Positions</h3>
+          <p>
+            I am currently recruiting self-motivated <b>PhD students</b>, <b>Masters students</b>, <b>visiting students</b>, and <b>interns</b> starting Fall 2026 / Spring 2027.
+          </p>
+          <p>
+            My research develops neuro-symbolic architectures at the intersection of generative AI, assured active perception, prediction, and trustworthy sequential decision making for autonomous systems.
+          </p>
+
+          <h3>Research Themes</h3>
+          <ul>
+            <li>Verification-centric neurosymbolic AI for embodied autonomy</li>
+            <li>Physics-grounded multi-modal world models</li>
+            <li>Uncertainty quantification and uncertainty-aware multi-agent teaming</li>
+            <li>Verifiable cooperative perception, sequential decision making, and planning</li>
+            <li>Rapid sim-to-real deployment and transfer for safety-critical systems</li>
+          </ul>
+
+          <h3>How to Apply</h3>
+          <p>
+            Interested candidates should email me at <a href="mailto:neel.bhatt@utdallas.edu" target="_blank">neel.bhatt@utdallas.edu</a> with:
+          </p>
+          <ul>
+            <li>A CV</li>
+            <li>
+              A one-page research statement that includes:
+              (1) your research interests,
+              (2) how they align with my lab,
+              (3) a concrete problem you want to study,
+              (4) a brief roadmap, and
+              (5) expected outcomes
+            </li>
+          </ul>
+          <p>
+            Please use a subject line such as
+            <b>“PhD Application – [Your Name]”</b>,
+            <b>“Masters Application – [Your Name]”</b>,
+            or
+            <b>“Visiting / Intern Application – [Your Name]”</b>.
+          </p>
+
+          <h3>What I Strive to Provide</h3>
+          <ul>
+            <li><b>Mentorship and research training</b>: Support to build strong research skills and publish high-quality papers in top-tier conferences and journals.</li>
+            <li><b>Real-world impact</b>: Opportunities to work on problems spanning autonomous driving, robotics, and trustworthy AI, including collaborations with academic and industry partners.</li>
+            <li><b>Internship support</b>: I encourage and support PhD students in pursuing summer internships, including guidance on applications and referrals when appropriate.</li>
+            <li><b>Equal opportunities for visitors and interns</b>: Visiting students and interns have the same access to mentorship, research guidance, and recommendation letters (when earned) as PhD students.</li>
+          </ul>
+        </div>
+
       </td>
     </tr>
   </table>
   Template adopted from <a href="https://jonbarron.info/" target="_blank">here</a>.
   <script>
-    // Section navigation function - scrolls to section
+    // Section navigation — restore main sections and scroll
     function scrollToSection(sectionId, button) {
-      // Remove active class from all tab buttons
       const tabButtons = document.querySelectorAll('.tab-btn');
-      tabButtons.forEach(btn => {
-        btn.classList.remove('active');
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      if (button) button.classList.add('active');
+
+      document.querySelectorAll('.content-section').forEach(section => {
+        if (section.id === 'section-openings') {
+          section.style.display = 'none';
+        } else {
+          section.style.display = '';
+        }
       });
-      
-      // Add active class to clicked button
-      if (button) {
-        button.classList.add('active');
-      }
-      
-      // Scroll to the section
+
+      const recruitingNote = document.getElementById('recruiting-note');
+      if (recruitingNote) recruitingNote.style.display = '';
+
       const section = document.getElementById(sectionId);
       if (section) {
-        // Get the offset position of the section
-        const offsetTop = section.offsetTop - 20; // 20px offset for better visibility
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
+        const offsetTop = section.offsetTop - 20;
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+      if (history.replaceState) {
+        history.replaceState(null, '', '#' + sectionId.replace('section-', ''));
+      }
+    }
+
+    // Openings view — hide other content sections
+    function showOpenings(button) {
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      if (button) button.classList.add('active');
+
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = section.id === 'section-openings' ? '' : 'none';
+      });
+
+      const recruitingNote = document.getElementById('recruiting-note');
+      if (recruitingNote) recruitingNote.style.display = 'none';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (history.replaceState) {
+        history.replaceState(null, '', '#openings');
       }
     }
 
@@ -1001,6 +1076,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+      var hash = (window.location.hash || '').replace('#', '');
+      if (hash === 'openings') {
+        showOpenings(document.getElementById('tab-openings'));
+      }
+
       if (window.particlesJS) {
         var particlesInstance = particlesJS('network-bg', {
           particles: {
