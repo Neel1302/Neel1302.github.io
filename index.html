@@ -36,14 +36,14 @@
   <div id="network-bg"></div>
   
   <!-- Tab Navigation -->
-  <div class="tab-navigation" style="position: sticky; top: 0; z-index: 100; background-color: #fff; padding: 8px 0; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <div style="max-width: 900px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
-      <button class="tab-btn active" onclick="scrollToSection('section-news', this)">News</button>
-      <button class="tab-btn" onclick="scrollToSection('section-projects', this)">Projects</button>
-      <button class="tab-btn" onclick="scrollToSection('section-publications', this)">Publications</button>
-      <button class="tab-btn" onclick="scrollToSection('section-outreach', this)">Outreach</button>
-      <button class="tab-btn" onclick="scrollToSection('section-media', this)">Media</button>
-      <button class="tab-btn" id="tab-openings" onclick="showOpenings(this)">Openings</button>
+  <div class="tab-navigation">
+    <div>
+      <button class="tab-btn active" data-section="section-news" onclick="scrollToSection('section-news', this)">News</button>
+      <button class="tab-btn" data-section="section-projects" onclick="scrollToSection('section-projects', this)">Projects</button>
+      <button class="tab-btn" data-section="section-publications" onclick="scrollToSection('section-publications', this)">Publications</button>
+      <button class="tab-btn" data-section="section-outreach" onclick="scrollToSection('section-outreach', this)">Outreach</button>
+      <button class="tab-btn" data-section="section-media" onclick="scrollToSection('section-media', this)">Media</button>
+      <button class="tab-btn tab-cta" id="tab-openings" onclick="showOpenings(this)">Openings</button>
     </div>
   </div>
 
@@ -84,7 +84,7 @@
 
         <!-- News Section -->
         <div id="section-news" class="content-section">
-        <p id="recruiting-note" style="text-align: center; font-style: italic; margin-top: -20px; margin-bottom: 20px; color: #555;">I am open to discussions regarding opportunities for self-motivated <a href="#openings" onclick="showOpenings(document.getElementById('tab-openings')); return false;">PhD and Masters students, visiting students, and interns</a> starting Fall 2026/Spring 2027.</p>
+        <p id="recruiting-note">I am open to discussions regarding opportunities for self-motivated <a href="#openings" onclick="showOpenings(document.getElementById('tab-openings')); return false;">PhD and Masters students, visiting students, and interns</a> starting Fall 2026/Spring 2027.</p>
         <h2>News</h2>
 
             <div class="news-container">
@@ -196,14 +196,22 @@
         <!-- Selected Publications Section -->
         <div id="section-publications" class="content-section">
         <h2>Selected Publications</h2>
-        <div style="margin-bottom: 20px;">
+        <div class="pub-view-toggle" style="margin-bottom: 12px;">
+          <button type="button" class="filter-btn active" id="pub-view-gallery" onclick="setPubView('gallery', this)">Visual overview</button>
+          <button type="button" class="filter-btn" id="pub-view-list" onclick="setPubView('list', this)">Full list</button>
+        </div>
+        <div style="margin-bottom: 16px;" id="pub-theme-filters">
           <button class="filter-btn active" onclick="filterPublications('all', this)">All</button>
           <button class="filter-btn" onclick="filterPublications('world-modeling', this)">World Modeling</button>
           <button class="filter-btn" onclick="filterPublications('verification-guided', this)">Verification-Guided Learning</button>
           <button class="filter-btn" onclick="filterPublications('uncertainty-mitigation', this)">Uncertainty Mitigation</button>
           <button class="filter-btn" onclick="filterPublications('real-world-transfer', this)">Real-World Transfer</button>
         </div>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+        <div id="pub-gallery" class="pub-gallery" aria-label="Publication visual overview"></div>
+
+        <div id="pub-list-panel" class="pub-list-panel" hidden>
+        <table id="pub-table" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
           <tr class="pub-item" data-category="real-world-transfer" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:20px;width:25%;vertical-align:top">
@@ -797,7 +805,8 @@
           </tr>
 
         </tbody></table>
-        </div>
+        </div><!-- /#pub-list-panel -->
+        </div><!-- /#section-publications -->
 
         <!-- Outreach Section -->
         <div id="section-outreach" class="content-section">
@@ -1099,13 +1108,60 @@
   </table>
   Template adopted from <a href="https://jonbarron.info/" target="_blank">here</a>.
   <script>
+    var navViewMode = 'main'; // 'main' | 'openings'
+    var scrollSpyPaused = false;
+    var scrollSpyPauseTimer = null;
+
+    function setActiveTabButton(button) {
+      document.querySelectorAll('.tab-btn').forEach(function (btn) {
+        btn.classList.remove('active');
+      });
+      if (button) button.classList.add('active');
+    }
+
+    function pauseScrollSpy(ms) {
+      scrollSpyPaused = true;
+      if (scrollSpyPauseTimer) clearTimeout(scrollSpyPauseTimer);
+      scrollSpyPauseTimer = setTimeout(function () {
+        scrollSpyPaused = false;
+      }, ms || 800);
+    }
+
+    function updateActiveTabFromScroll() {
+      if (navViewMode !== 'main' || scrollSpyPaused) return;
+
+      var nav = document.querySelector('.tab-navigation');
+      var offset = (nav ? nav.offsetHeight : 60) + 24;
+      var y = window.scrollY + offset;
+      var sectionIds = [
+        'section-news',
+        'section-projects',
+        'section-publications',
+        'section-outreach',
+        'section-media'
+      ];
+      var current = sectionIds[0];
+
+      for (var i = 0; i < sectionIds.length; i++) {
+        var el = document.getElementById(sectionIds[i]);
+        if (!el || el.style.display === 'none') continue;
+        if (el.offsetTop <= y) current = sectionIds[i];
+      }
+
+      document.querySelectorAll('.tab-btn[data-section]').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-section') === current);
+      });
+      var openingsBtn = document.getElementById('tab-openings');
+      if (openingsBtn) openingsBtn.classList.remove('active');
+    }
+
     // Section navigation — restore main sections and scroll
     function scrollToSection(sectionId, button) {
-      const tabButtons = document.querySelectorAll('.tab-btn');
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      if (button) button.classList.add('active');
+      navViewMode = 'main';
+      setActiveTabButton(button);
+      pauseScrollSpy(900);
 
-      document.querySelectorAll('.content-section').forEach(section => {
+      document.querySelectorAll('.content-section').forEach(function (section) {
         if (section.id === 'section-openings') {
           section.style.display = 'none';
         } else {
@@ -1113,13 +1169,14 @@
         }
       });
 
-      const recruitingNote = document.getElementById('recruiting-note');
+      var recruitingNote = document.getElementById('recruiting-note');
       if (recruitingNote) recruitingNote.style.display = '';
 
-      const section = document.getElementById(sectionId);
+      var section = document.getElementById(sectionId);
       if (section) {
-        const offsetTop = section.offsetTop - 20;
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        var nav = document.querySelector('.tab-navigation');
+        var offset = (nav ? nav.offsetHeight : 60) + 12;
+        window.scrollTo({ top: section.offsetTop - offset, behavior: 'smooth' });
       }
       if (history.replaceState) {
         history.replaceState(null, '', '#' + sectionId.replace('section-', ''));
@@ -1128,15 +1185,15 @@
 
     // Openings view — hide other content sections
     function showOpenings(button) {
-      const tabButtons = document.querySelectorAll('.tab-btn');
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      if (button) button.classList.add('active');
+      navViewMode = 'openings';
+      setActiveTabButton(button);
+      pauseScrollSpy(900);
 
-      document.querySelectorAll('.content-section').forEach(section => {
+      document.querySelectorAll('.content-section').forEach(function (section) {
         section.style.display = section.id === 'section-openings' ? '' : 'none';
       });
 
-      const recruitingNote = document.getElementById('recruiting-note');
+      var recruitingNote = document.getElementById('recruiting-note');
       if (recruitingNote) recruitingNote.style.display = 'none';
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1147,43 +1204,166 @@
 
     // Publication filtering function - must be global for onclick handlers
     function filterPublications(category, button) {
-      // Remove active class from all buttons
-      const buttons = document.querySelectorAll('.filter-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      
-      // Add active class to clicked button
-      button.classList.add('active');
-      
-      // Get all publication items
-      const items = document.querySelectorAll('.pub-item');
-      
-      // Show/hide items based on category
-      items.forEach(item => {
+      var filterRoot = document.getElementById('pub-theme-filters');
+      if (filterRoot) {
+        filterRoot.querySelectorAll('.filter-btn').forEach(function (btn) {
+          btn.classList.remove('active');
+        });
+      }
+      if (button) button.classList.add('active');
+
+      document.querySelectorAll('.pub-item').forEach(function (item) {
         if (category === 'all') {
           item.style.display = 'table-row';
-        } else {
-          // Get categories as space-separated string and split into array
-          const itemCategories = item.getAttribute('data-category');
-          if (itemCategories) {
-            const categoriesArray = itemCategories.split(' ').filter(c => c.length > 0);
-            // Show if the publication belongs to the selected category
-            if (categoriesArray.includes(category)) {
-              item.style.display = 'table-row';
-            } else {
-              item.style.display = 'none';
-            }
-          } else {
-            item.style.display = 'none';
-          }
+          return;
         }
+        var itemCategories = item.getAttribute('data-category') || '';
+        var categoriesArray = itemCategories.split(' ').filter(function (c) { return c.length > 0; });
+        item.style.display = categoriesArray.indexOf(category) !== -1 ? 'table-row' : 'none';
+      });
+
+      document.querySelectorAll('.pub-card').forEach(function (card) {
+        if (category === 'all') {
+          card.style.display = '';
+          return;
+        }
+        var cats = (card.getAttribute('data-category') || '').split(' ').filter(function (c) { return c.length > 0; });
+        card.style.display = cats.indexOf(category) !== -1 ? '' : 'none';
+      });
+    }
+
+    function setPubView(mode, button) {
+      var gallery = document.getElementById('pub-gallery');
+      var listPanel = document.getElementById('pub-list-panel');
+      var galleryBtn = document.getElementById('pub-view-gallery');
+      var listBtn = document.getElementById('pub-view-list');
+      if (!gallery || !listPanel) return;
+
+      if (button) {
+        if (galleryBtn) galleryBtn.classList.toggle('active', mode === 'gallery');
+        if (listBtn) listBtn.classList.toggle('active', mode === 'list');
+      }
+
+      if (mode === 'gallery') {
+        gallery.hidden = false;
+        listPanel.hidden = true;
+      } else {
+        gallery.hidden = true;
+        listPanel.hidden = false;
+      }
+    }
+
+    function openPubFromCard(pubId) {
+      setPubView('list', document.getElementById('pub-view-list'));
+      var row = document.getElementById(pubId);
+      if (!row) return;
+      pauseScrollSpy(1200);
+      var nav = document.querySelector('.tab-navigation');
+      var offset = (nav ? nav.offsetHeight : 60) + 16;
+      window.requestAnimationFrame(function () {
+        window.setTimeout(function () {
+          var top = row.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+          row.classList.add('pub-item-flash');
+          window.setTimeout(function () { row.classList.remove('pub-item-flash'); }, 1600);
+        }, 40);
+      });
+    }
+
+    function buildPubGallery() {
+      var gallery = document.getElementById('pub-gallery');
+      var items = document.querySelectorAll('#pub-table .pub-item');
+      if (!gallery || !items.length) return;
+      gallery.innerHTML = '';
+
+      items.forEach(function (item, index) {
+        var img = item.querySelector('td img');
+        var titleEl = item.querySelector('papertitle');
+        var venueEl = item.querySelector('em');
+        if (!img || !titleEl) return;
+
+        var pubId = 'pub-' + index;
+        item.id = pubId;
+
+        var card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'pub-card';
+        card.setAttribute('data-category', item.getAttribute('data-category') || '');
+        card.setAttribute('aria-label', 'Open details for ' + titleEl.textContent.trim());
+        card.onclick = function () { openPubFromCard(pubId); };
+
+        var media = document.createElement('div');
+        media.className = 'pub-card-media';
+        var cardImg = document.createElement('img');
+        cardImg.src = img.getAttribute('src');
+        cardImg.alt = img.getAttribute('alt') || titleEl.textContent.trim();
+        cardImg.loading = 'lazy';
+        media.appendChild(cardImg);
+
+        var body = document.createElement('div');
+        body.className = 'pub-card-body';
+        var title = document.createElement('span');
+        title.className = 'pub-card-title';
+        title.textContent = titleEl.textContent.trim();
+        body.appendChild(title);
+        if (venueEl) {
+          var venue = document.createElement('span');
+          venue.className = 'pub-card-venue';
+          venue.textContent = venueEl.textContent.trim();
+          body.appendChild(venue);
+        }
+
+        var footer = document.createElement('div');
+        footer.className = 'pub-card-footer';
+        var hint = document.createElement('span');
+        hint.className = 'pub-card-hint';
+        hint.textContent = 'View details →';
+        footer.appendChild(hint);
+
+        var highlights = item.querySelectorAll('b[style*="color:red"], b[style*="color: red"]');
+        if (highlights.length) {
+          var badge = document.createElement('span');
+          badge.className = 'pub-card-highlight';
+          var badgeText = Array.prototype.map.call(highlights, function (el) {
+            return el.textContent.trim().replace(/!+$/, '');
+          }).join(' · ');
+          badge.innerHTML = '<span class="pub-card-highlight-icon" aria-hidden="true">\uD83E\uDD47</span><span class="pub-card-highlight-text"></span>';
+          badge.querySelector('.pub-card-highlight-text').textContent = badgeText;
+          footer.appendChild(badge);
+        }
+        body.appendChild(footer);
+
+        card.appendChild(media);
+        card.appendChild(body);
+        gallery.appendChild(card);
       });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+      buildPubGallery();
+      setPubView('gallery', document.getElementById('pub-view-gallery'));
+
       var hash = (window.location.hash || '').replace('#', '');
       if (hash === 'openings') {
         showOpenings(document.getElementById('tab-openings'));
+      } else if (hash) {
+        var sectionId = 'section-' + hash;
+        var sectionBtn = document.querySelector('.tab-btn[data-section="' + sectionId + '"]');
+        if (sectionBtn && document.getElementById(sectionId)) {
+          scrollToSection(sectionId, sectionBtn);
+        }
       }
+
+      var scrollSpyTicking = false;
+      window.addEventListener('scroll', function () {
+        if (scrollSpyTicking) return;
+        scrollSpyTicking = true;
+        window.requestAnimationFrame(function () {
+          updateActiveTabFromScroll();
+          scrollSpyTicking = false;
+        });
+      }, { passive: true });
+      updateActiveTabFromScroll();
 
       if (window.particlesJS) {
         var particlesInstance = particlesJS('network-bg', {

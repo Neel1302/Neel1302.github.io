@@ -130,10 +130,6 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-/*.label {
-    border: 1px solid #000
-}*/
-
 label {
     display: inline-block;
     max-width: 100%;
@@ -266,39 +262,62 @@ a.label:hover {
 }
 
 .filter-btn {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  color: #333;
-  padding: 8px 16px;
-  margin: 5px;
+  background: #f0f3f7;
+  border: 1px solid #dde2ea;
+  color: #1a2332;
+  padding: 0.45rem 0.95rem;
+  margin: 0.25rem;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .filter-btn:hover {
-  background-color: #e0e0e0;
-  border-color: #bbb;
+  background: #e6ebf1;
+  border-color: #c8d0dc;
 }
 
 .filter-btn.active {
-  background-color: #1772d0;
+  background: #0c5f8a;
   color: #fff;
-  border-color: #1772d0;
+  border-color: #0c5f8a;
 }
 
 .filter-btn.active:hover {
-  background-color: #155ba0;
-  border-color: #155ba0;
+  background: #094a6c;
+  border-color: #094a6c;
 }
 
+/* News section — refreshed card list (kept from design refresh) */
 .news-container {
-  max-height: 600px;
+  max-height: 560px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fbfcfd;
+  padding: 0.85rem 1rem;
+}
+
+.news-container ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.news-container li {
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  line-height: 1.55;
+}
+
+.news-container li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .news-container::-webkit-scrollbar {
@@ -306,66 +325,241 @@ a.label:hover {
 }
 
 .news-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
+  background: transparent;
 }
 
 .news-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+  background: #c5cad3;
+  border-radius: 999px;
 }
 
 .news-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #888;
+}
+
+.pub-view-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.pub-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pub-gallery[hidden],
+.pub-list-panel[hidden] {
+  display: none !important;
+}
+
+.pub-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.pub-card:hover,
+.pub-card:focus {
+  outline: none;
+  border-color: #b7d0e0;
+  box-shadow: 0 6px 18px rgba(12, 95, 138, 0.12);
+  transform: translateY(-1px);
+}
+
+.pub-card-media {
+  background: #f3f5f8;
+  border-bottom: 1px solid #e5e7eb;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.pub-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pub-card-body {
+  padding: 0.75rem 0.85rem 0.9rem;
+}
+
+.pub-card-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: #1a2332;
+  margin-bottom: 0.35rem;
+}
+
+.pub-card-venue {
+  display: block;
+  font-size: 0.78rem;
+  color: #5c667a;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.pub-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.pub-card-hint {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  color: #0c5f8a;
+  font-weight: 600;
+}
+
+.pub-card-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  max-width: 70%;
+  margin-left: auto;
+  padding: 0.2rem 0.5rem 0.2rem 0.35rem;
+  border-radius: 999px;
+  background: #c5e08a;
+  border: 1px solid #8fbf4a;
+  color: #1f2a1a;
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.pub-card-highlight-icon {
+  flex: 0 0 auto;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.pub-card-highlight-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.pub-item-flash td {
+  background: #eef5f9;
+  transition: background 0.4s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .pub-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+  }
 }
 
 /* Tab Navigation Styles */
 .tab-navigation {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(1.1) blur(10px);
+  -webkit-backdrop-filter: saturate(1.1) blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  padding: 0.65rem 0;
+  margin-bottom: 15px;
+}
+
+.tab-navigation > div {
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  gap: 0.35rem;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .tab-btn {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid transparent;
-  color: #666;
-  padding: 6px 12px;
-  margin-right: 2px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #5c667a;
+  padding: 0.4rem 0.9rem;
+  margin: 0;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 0.92rem;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-weight: 400;
-  transition: all 0.2s ease;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
   outline: none;
 }
 
 .tab-btn:hover {
-  color: #1772d0;
-  background-color: #f8f8f8;
+  color: #0c5f8a;
+  background: #f0f3f7;
+  border-color: #dde2ea;
 }
 
 .tab-btn.active {
-  color: #1772d0;
-  border-bottom-color: #1772d0;
-  font-weight: 500;
+  color: #fff;
+  background: #0c5f8a;
+  border-color: #0c5f8a;
+  font-weight: 600;
+}
+
+#tab-openings,
+.tab-btn.tab-cta {
+  margin-left: auto;
+  font-weight: 650;
+  border: 1.5px solid #0c5f8a;
+  color: #0c5f8a;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(12, 95, 138, 0.14);
+}
+
+#tab-openings:hover,
+.tab-btn.tab-cta:hover {
+  color: #0c5f8a;
+  background: #eef5f9;
+  border-color: #0c5f8a;
+}
+
+#tab-openings.active,
+.tab-btn.tab-cta.active {
+  color: #fff;
+  background: #0c5f8a;
+  border-color: #0c5f8a;
+  box-shadow: 0 2px 6px rgba(12, 95, 138, 0.28);
 }
 
 .content-section {
-  scroll-margin-top: 20px;
+  scroll-margin-top: 4.5rem;
 }
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-  /* Adjust main container */
   body {
     padding: 0;
     margin: 0;
   }
   
-  /* Make main content table responsive */
   table[style*="max-width:900px"] {
     width: 100% !important;
     max-width: 100% !important;
@@ -373,13 +567,10 @@ a.label:hover {
     box-sizing: border-box;
   }
   
-  /* Adjust main container padding */
   table {
     padding: 0 10px;
   }
   
-  /* Make profile section stack vertically with photo first */
-  /* Target the nested table that contains profile info */
   table > tbody > tr > td > table > tbody > tr {
     display: flex !important;
     flex-direction: column;
@@ -393,40 +584,34 @@ a.label:hover {
     padding: 10px !important;
   }
   
-  /* Reorder profile photo to appear first on mobile */
   table > tbody > tr > td > table > tbody > tr td[style*="width:40%"] {
-    order: -1; /* Move photo to top */
+    order: -1;
     text-align: center;
   }
   
   table > tbody > tr > td > table > tbody > tr td[style*="width:63%"] {
-    order: 0; /* Keep text content after photo */
+    order: 0;
   }
   
-  /* Make icons smaller on mobile */
   p a img[style*="height:15px"] {
     height: 12px !important;
     margin-bottom: -1px !important;
   }
   
-  /* Adjust name font size */
   name {
     font-size: 24px;
   }
   
-  /* Adjust heading font size */
   heading {
     font-size: 18px;
   }
   
-  /* Make all images responsive - override inline width styles */
   img {
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
   }
   
-  /* Tab navigation container adjustments */
   .tab-navigation {
     padding: 5px 0 !important;
   }
@@ -435,7 +620,6 @@ a.label:hover {
     padding: 0 10px !important;
   }
   
-  /* Make table cells stack for publications/projects/media */
   table tbody tr {
     display: block;
   }
@@ -448,13 +632,11 @@ a.label:hover {
     vertical-align: top !important;
   }
   
-  /* Handle colspan cells */
   table tbody tr td[colspan] {
     display: block !important;
     width: 100% !important;
   }
   
-  /* Adjust headings */
   h2 {
     font-size: 20px;
     margin-top: 20px;
@@ -467,14 +649,12 @@ a.label:hover {
     margin-bottom: 10px;
   }
   
-  /* Center images in media/projects sections on mobile */
   table tbody tr td[style*="width:25%"] img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
   }
   
-  /* Adjust font sizes */
   body, td, th, tr, p, a {
     font-size: 13px;
   }
@@ -487,7 +667,6 @@ a.label:hover {
     font-size: 13px;
   }
   
-  /* Adjust tab navigation for mobile */
   .tab-navigation {
     flex-wrap: wrap;
     justify-content: center;
@@ -499,42 +678,38 @@ a.label:hover {
     padding: 5px 8px;
     margin: 2px;
   }
-  
-  /* Adjust news container */
-  .news-container {
-    max-height: none;
-    padding-right: 0;
+
+  #tab-openings {
+    margin-left: 0;
   }
   
-  /* Adjust filter buttons */
+  .news-container {
+    max-height: none;
+  }
+  
   .filter-btn {
     font-size: 12px;
     padding: 6px 12px;
     margin: 3px;
   }
   
-  /* Adjust label sizes */
   .label {
     font-size: 70%;
     padding: .15em .5em .15em;
   }
   
-  /* Adjust content section scroll margin */
   .content-section {
     scroll-margin-top: 50px;
   }
   
-  /* Reduce padding in table cells */
   table tbody tr td {
     padding: 10px 5px !important;
   }
   
-  /* Make links wrap better */
   p a {
     word-break: break-word;
   }
   
-  /* Adjust profile photo container */
   .one, .two {
     width: 120px;
     height: 120px;
@@ -543,7 +718,6 @@ a.label:hover {
 }
 
 @media screen and (max-width: 480px) {
-  /* Extra small devices */
   name {
     font-size: 20px;
   }
@@ -573,24 +747,20 @@ a.label:hover {
     font-size: 65%;
   }
   
-  /* Reduce padding even more */
   table tbody tr td {
     padding: 8px 3px !important;
   }
   
-  /* Make profile photo smaller */
   .one, .two {
     width: 100px;
     height: 100px;
   }
   
-  /* Better spacing for list items */
   ul li {
     margin-bottom: 8px;
     line-height: 1.5;
   }
   
-  /* Adjust paragraph spacing */
   p {
     margin-bottom: 10px;
     line-height: 1.5;
